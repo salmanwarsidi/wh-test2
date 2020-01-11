@@ -1,0 +1,34 @@
+section.top-space {
+    display: block;
+    height: 2em;
+}
+.content {
+    margin: 0 auto;
+    display: block;
+    max-width: 1024px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+li {
+    width: 33.3%;
+    text-align: center;
+}
+a {
+    font-family: ProximaNovaBold;
+    color: #333;
+    font-size: 1em;
+    display: block;
+    padding: .5em;
+}
+a:hover {
+    text-decoration: none;
+    color: #777;
+}
+section.content-block.blue {
+    min-height: 25em;
+}

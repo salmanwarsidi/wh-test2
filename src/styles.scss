@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: ProximaNova;
+    src: url("/assets/fonts/ProximaNova-Reg.otf") format("truetype");
+}
+@font-face {
+    font-family: ProximaNovaBold;
+    src: url("/assets/fonts/ProximaNova-Bold.otf") format("truetype");
+}
+@font-face {
+    font-family: ProximaNovaExtraBold;
+    src: url("/assets/fonts/ProximaNova-Extrabold.otf") format("truetype");
+}
+
+body {
+    font-family: ProximaNova;
+}
+
+.blue {
+    background-color: #23123a;
+}
+.roww {
+    display: block;
+    margin-bottom: 1em;
+}
+.coll {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.coll-2 {
+    width: 16.67%;
+}
+.coll-3 {
+    width: 25%;
+}
+.coll-4 {
+    width: 37.5%;
+}
+.coll-5 {
+    width: 41.67%;
+}
+.coll-6 {
+    width: 50%;
+}
+.coll-7 {
+    width: 58.33%;
+}
+.coll-8 {
+    width: 62.5%;
+}
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+    .hide-phone {
+        display: none;
+    }
+}

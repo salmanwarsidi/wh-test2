@@ -1,0 +1,14 @@
+:host ::ng-deep input {
+  border: none;
+  outline: none;
+}
+
+:host {
+  border: 1px solid grey;
+  padding: 5px;
+}
+
+
+:host(.focus) {
+  border: 1px solid blue;
+}

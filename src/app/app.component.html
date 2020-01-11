@@ -1,0 +1,35 @@
+<section class="top-space">
+    <div class="content blue">
+        &nbsp;
+    </div>
+</section>
+<section class="top-nav">
+    <div class="content">
+        <ul>
+            <li>
+                <a href="javascript:;" [routerLink]="['/home']" routerLinkActive="router-link-active">
+                    Home Page <span class="hide-phone"> Navigation </span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" [routerLink]="['/private']" routerLinkActive="router-link-active">
+                    Private Page <span class="hide-phone"> Navigation </span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" [routerLink]="['/public/list']" routerLinkActive="router-link-active">
+                    Public Page  <span class="hide-phone"> Navigation </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="content-block">
+    <div class="content">
+        <div [@routeAnimations]="prepareRoute(outlet)">
+            <router-outlet #outlet="outlet"></router-outlet>
+        </div>
+    </div>
+</section>
+
+<!-- <router-outlet></router-outlet> -->

@@ -1,0 +1,15 @@
+<section class="list">
+    <ng-container *ngIf="(dataSvc.records$ | async).length > 0;else norecord">
+        <h1>Records</h1>
+        <app-data-table></app-data-table>
+    </ng-container>
+
+    <ng-template #norecord>
+        <div class="text-center">
+            <h2 align="center">No records!</h2>
+            <a href="javascript:;" class="link" [routerLink]="['/public/form']" routerLinkActive="router-link-active">
+                Add record
+            </a>
+        </div>
+    </ng-template>
+</section>

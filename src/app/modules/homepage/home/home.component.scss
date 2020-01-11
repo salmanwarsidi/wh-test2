@@ -1,0 +1,98 @@
+.home {
+  background-image: url(/assets/images/bg.png);
+  min-height: 400px;
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 3em;
+}
+
+h1 {
+  color: #FFF;
+  font-family: ProximaNovaExtraBold;
+  font-size: 4em;
+}
+
+.desc-block {
+  background-color: #f1f6f9;
+  padding: 3em;
+}
+
+h4 {
+  font-family: ProximaNovaBold;
+}
+
+.testimonials {
+  background-color: #FFF;
+  padding: 3em;
+  color: #333;
+}
+
+a {
+  color: #2ea1f8;
+}
+
+.rate span {
+  color: #59d8d1;
+}
+
+img {
+  width: 200px;
+}
+
+.approval {
+  text-align: center;
+}
+
+ul {
+  padding: 0 15px;
+}
+
+span.badge-approval {
+  border: 1px solid #59d8d1;
+  padding: 3px 10px;
+  background-color: #59d8d1;
+  color: #fff;
+  border-radius: 24px;
+  margin: 0 auto;
+  margin-top: 1em;
+  display: block;
+  width: 100px;
+}
+
+button.btn-apply {
+  border: 1px solid #fa6e3d;
+  padding: 3px 10px;
+  background-color: #fa6e3d;
+  color: #fff;
+  border-radius: 3px;
+  margin: 0 auto;
+  margin-top: 1em;
+  display: block;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    padding: 1em;
+    font-size: 1em;
+  }
+
+  h4 {
+    margin: 10px;
+    font-size: 1.15em;
+    padding: 10px 0;
+  }
+
+  .desc-block {
+    padding: 0;
+  }
+
+  .testimonials {
+    padding: 10px !important;
+  }
+
+  p {
+    padding: 5px;
+  }
+}

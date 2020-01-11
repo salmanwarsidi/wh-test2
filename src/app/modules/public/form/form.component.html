@@ -1,0 +1,43 @@
+<section class="form">
+    <h1>Records</h1>
+    <app-data-table></app-data-table>
+
+    <div class="card">
+        <div class="card-body">
+            <fieldset>
+                <legend>sample form</legend>
+                <div class="form-group name">
+                    <label for="">Name</label>
+                    <icon-input icon="user">
+                        <input type="text" placeholder="Name" [value]="name" (valueChange)="name=$event" iconInputRef>
+                    </icon-input>
+                    <input-validation-errors [value]="name" options='required' (validate)="error['name']=$event">
+                    </input-validation-errors>
+                </div>
+                <div class="form-group email">
+                    <label for="">Email</label>
+                    <icon-input icon="envelope">
+                        <input type="email" placeholder="Email" [value]="email" (valueChange)="email=$event"
+                            iconInputRef>
+                    </icon-input>
+                    <input-validation-errors [value]="email" options='required,email'
+                        (validate)="error['email']=$event">
+                    </input-validation-errors>
+                </div>
+                <div class="form-group amount">
+                    <label for="">Amount</label>
+                    <icon-input icon="money-bill">
+                        <input type="text" placeholder="Amount" [value]="amount" (valueChange)="amount=$event"
+                            iconInputRef usdCurrencyFormatter>
+                    </icon-input>
+                    <input-validation-errors [value]="amount" options='required' (validate)="error['amount']=$event">
+                    </input-validation-errors>
+                </div>
+                <br>
+                <button class="btn btn-default" type="button" (click)="save()">
+                    <i class="fas fa-save"></i> Save
+                </button>
+            </fieldset>
+        </div>
+    </div>
+</section>

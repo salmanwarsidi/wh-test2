@@ -1,0 +1,35 @@
+<ng-template #sort let-order="order" let-field="field">
+    <div class="pull-right sort">
+        <i class="fas fa-sort" *ngIf="(!field || !order) || order.indexOf(field)<0"></i>
+        <i class="fas fa-sort-up" *ngIf="order==field"></i>
+        <i class="fas fa-sort-down" *ngIf="order=='-'+field"></i>
+    </div>
+</ng-template>
+
+<table class="table table-striped">
+    <thead>
+        <th class="link" (click)="setOrder('name');">
+            Name
+            <ng-container *ngTemplateOutlet="sort;context:{order: filter.order, field: 'name'}">
+            </ng-container>
+        </th>
+        <th class="link" (click)="setOrder('email');">
+            Email
+            <ng-container *ngTemplateOutlet="sort;context:{order: filter.order, field: 'email'}">
+            </ng-container>
+        </th>
+        <th class="link" (click)="setOrder('amount');">
+            Amount
+            <ng-container *ngTemplateOutlet="sort;context:{order: filter.order, field: 'amount'}">
+            </ng-container>
+        </th>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of dataSvc.records$ | async; let i=index">
+            <td>{{data.name}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.amount | usdCurrency}} </td>
+        </tr>
+    </tbody>
+</table>
